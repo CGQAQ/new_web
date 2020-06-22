@@ -8,4 +8,6 @@ ln -s /etc/nginx/sites-available/mainpage /etc/nginx/sites-enabled/mainpage
 mkdir /var/www/cgqaq
 cp index.html /var/www/cgqaq/index.html
 
+certbot --nginx
+
 nginx -s reload
