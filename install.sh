@@ -9,5 +9,3 @@ mkdir /var/www/cgqaq
 cp index.html /var/www/cgqaq/index.html
 
 nginx -s reload
-
-certbot --nginx
