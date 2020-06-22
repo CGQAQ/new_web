@@ -2,12 +2,13 @@
 
 apt update -y && apt install nginx certbot python-certbot-nginx -y
 
-mv mainpage /etc/nginx/sites-available/mainpage
+cp mainpage /etc/nginx/sites-available/mainpage
 ln -s /etc/nginx/sites-available/mainpage /etc/nginx/sites-enabled/mainpage
+rm /etc/nginx/sites-enabled/default
 
 mkdir /var/www/cgqaq
 cp index.html /var/www/cgqaq/index.html
 
-certbot --nginx
 
 nginx -s reload
+certbot --nginx
